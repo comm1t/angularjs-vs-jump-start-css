@@ -6,4 +6,6 @@ app.config(function($routeProvider) {
     templateUrl: 'home.html'
   });
 
+	$routeProvider.otherwise({ redirectTo: '/' });
+
 });
