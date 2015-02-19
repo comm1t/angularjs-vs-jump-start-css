@@ -1,3 +1,3 @@
-Gotcha 6.00
+Gotcha 7.00
 
-- Simple AngularJS app and "Jump Start Css" template in partilas
+- Clear html and css app
