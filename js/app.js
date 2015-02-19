@@ -6,6 +6,21 @@ app.config(function($routeProvider) {
     templateUrl: 'home.html'
   });
 
-	$routeProvider.otherwise({ redirectTo: '/' });
+  $routeProvider.when('/headernav', {
+    templateUrl: 'header-nav.html'
+  });
 
+  $routeProvider.when('/items', {
+    templateUrl: 'items.html'
+  });
+
+	$routeProvider.otherwise({ redirectTo: '/items' });
+
+});
+
+app.directive('headernav', function(){
+    return {
+        restrict: 'AE',
+        templateUrl: "header-nav.html"
+    };
 });
