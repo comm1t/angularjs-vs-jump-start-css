@@ -6,14 +6,18 @@ app.config(function($routeProvider) {
     templateUrl: 'partials/header-nav.html'
   });
 
-  $routeProvider.when('/items', {
-    templateUrl: 'partials/items.html'
-  });
-
     $routeProvider.when('/promo', {
     templateUrl: 'partials/tpl/promo.tpl.html'
   });
 
+    $routeProvider.when('/main', {
+    templateUrl: 'partials/tpl/main.tpl.html'
+  });
+
+
+  $routeProvider.when('/items', {
+    templateUrl: 'partials/items.html'
+  });
 
 	$routeProvider.otherwise({ redirectTo: '/items' });
 
@@ -30,5 +34,12 @@ app.directive('promo', function(){
     return {
         restrict: 'AE',
         templateUrl: "partials/tpl/promo.tpl.html"
+    };
+});
+
+app.directive('main', function(){
+    return {
+        restrict: 'AE',
+        templateUrl: "partials/tpl/main.tpl.html"
     };
 });
