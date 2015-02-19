@@ -14,6 +14,10 @@ app.config(function($routeProvider) {
     templateUrl: 'partials/tpl/main.tpl.html'
   });
 
+    $routeProvider.when('/footer', {
+    templateUrl: 'partials/tpl/footer-inside.tpl.html'
+  });    
+
 
   $routeProvider.when('/items', {
     templateUrl: 'partials/items.html'
@@ -41,5 +45,26 @@ app.directive('main', function(){
     return {
         restrict: 'AE',
         templateUrl: "partials/tpl/main.tpl.html"
+    };
+});
+
+app.directive('latest', function(){
+    return {
+        restrict: 'AE',
+        templateUrl: "partials/tpl/latest.tpl.html"
+    };
+});
+
+app.directive('sidebar', function(){
+    return {
+        restrict: 'AE',
+        templateUrl: "partials/tpl/sidebar.tpl.html"
+    };
+});
+
+app.directive('footerinside', function(){
+    return {
+        restrict: 'AE',
+        templateUrl: "partials/tpl/footer-inside.tpl.html"
     };
 });
